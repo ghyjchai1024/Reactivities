@@ -20,6 +20,6 @@ namespace Persistence
                     new Value {Id = 2, Name = "Value 102"},
                     new Value {Id = 3, Name = "Value 103"}
                 );
-        }
+        }   
     }
 }
