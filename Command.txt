@@ -1,0 +1,42 @@
+dotnet new sln
+dotnet new classlib -n Domain
+dotnet new classlib -n Application
+dotnet new classlib -n Persistence
+dotnet new webapi -n API
+dotnet sln add Domain/
+dotnet sln add Application/
+dotnet sln add Persistence/
+dotnet sln add API/
+
+**Add reference from Reactivities folder**
+cd Application
+dotnet add reference ../Domain/
+dotnet add reference ../Persistence/
+
+cd..
+cd API
+dotnet add reference ../Application/
+
+cd..
+cd Persistence
+dotnet add reference ../Domain/
+
+cd..
+code .
+
+In VS Code, it will prompt Required assets to build and debug are missing from 'Reactivities'. Add them? Yes
+
+VS Code > Settings > Type exclude > add **/bin and **/obj to exclude list
+
+Go to persistence project, nuget package add 
+1. Microsoft.EntityFrameworkCore
+2. Microsoft.EntityFrameworkCore.Sqlite
+
+Go to API project, nuget package add 
+1. Microsoft.EntityFrameworkCore.Design
+
+dotnet tool install --global dotnet-ef
+
+cd reactivities folder, dotnet ef migrations add InitialCreated -p Persistence/ -s API/
+
+cd reactivities folder, dotnet ef migrations add SeedValues -p Persistence/ -s API/
