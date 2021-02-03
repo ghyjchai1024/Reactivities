@@ -40,3 +40,8 @@ dotnet tool install --global dotnet-ef
 cd reactivities folder, dotnet ef migrations add InitialCreated -p Persistence/ -s API/
 
 cd reactivities folder, dotnet ef migrations add SeedValues -p Persistence/ -s API/
+
+Section 4
+Stop API run, dotnet ef migrations add "ActivitiesAdded" -p Persistence/ -s API/
+
+Go to Application project, nuget package install MediatR.Extensions.Microsoft.DependencyInjection
