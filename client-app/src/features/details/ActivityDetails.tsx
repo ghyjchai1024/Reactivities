@@ -6,9 +6,10 @@ interface IPros {
   activity: IActivity;
   setEditMode: (editMode : boolean) => void;
   setSelectedActivity: (activity: IActivity | null) => void;
+  submitting: boolean
 }
 
-const ActivityDetails: React.FC<IPros> = ({ activity, setEditMode,setSelectedActivity }) => {
+const ActivityDetails: React.FC<IPros> = ({ activity, setEditMode,setSelectedActivity, submitting }) => {
   return (
     <Card fluid>
       <Image

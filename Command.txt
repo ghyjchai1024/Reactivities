@@ -45,3 +45,7 @@ Section 4
 Stop API run, dotnet ef migrations add "ActivitiesAdded" -p Persistence/ -s API/
 
 Go to Application project, nuget package install MediatR.Extensions.Microsoft.DependencyInjection
+
+
+drop database reset data
+cd reactivities folder, dotnet ef database drop -p Persistence/ -s API/
