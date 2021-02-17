@@ -49,3 +49,5 @@ Go to Application project, nuget package install MediatR.Extensions.Microsoft.De
 
 drop database reset data
 cd reactivities folder, dotnet ef database drop -p Persistence/ -s API/
+
+cd client-app, npm install mobx mobx-react-lite
