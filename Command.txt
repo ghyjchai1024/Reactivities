@@ -51,3 +51,6 @@ drop database reset data
 cd reactivities folder, dotnet ef database drop -p Persistence/ -s API/
 
 cd client-app, npm install mobx mobx-react-lite
+
+Go to application project, nuget package add 
+1. FluentValidation.DotNetCore
