@@ -54,3 +54,10 @@ cd client-app, npm install mobx mobx-react-lite
 
 Go to application project, nuget package add 
 1. FluentValidation.DotNetCore
+
+cd client-app, npm install react-final-form final-form
+cd client-app, npm install react-widgets react-widgets-date-fns
+import 'react-widgets/dist/css/react-widgets.css'; to index.html
+import dateFnsLocalizer from 'react-widgets-date-fns'; 
+dateFnsLocalizer() to index.html
+cd client-app, npm install revalidate

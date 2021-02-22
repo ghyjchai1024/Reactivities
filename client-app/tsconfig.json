@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
     "experimentalDecorators": true
   },
-  "include": ["src"],
+  "include": ["src", "./typings-custom/**/*.ts"],
   "exclude": [
     "node_modules",
     "typings/main",

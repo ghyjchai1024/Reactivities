@@ -1,21 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import "react-toastify/dist/ReactToastify.min.css";
+import "react-widgets/dist/css/react-widgets.css";
 import "./app/layout/styles.css";
 import App from "./app/layout/App";
 import * as serviceWorker from "./serviceWorker";
-import { Router } from "react-router-dom";
 import ScrollToTop from "./app/layout/ScrollToTop";
-import { createBrowserHistory } from "history";
-import 'react-toastify/dist/ReactToastify.min.css'
+import dateFnsLocalizer from "react-widgets-date-fns";
+import Moment from "moment";
+import momentLocalizer from "react-widgets-moment";
+
+new dateFnsLocalizer();
+Moment.locale("en");
+momentLocalizer();
+// => Works out of the box with default formats (defaultFormats) and the `en-US` locale
 
 export const history = createBrowserHistory();
+
 ReactDOM.render(
   <Router history={history}>
     <ScrollToTop>
       <App />
     </ScrollToTop>
   </Router>,
-
   document.getElementById("root")
 );
 
