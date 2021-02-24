@@ -61,3 +61,23 @@ import 'react-widgets/dist/css/react-widgets.css'; to index.html
 import dateFnsLocalizer from 'react-widgets-date-fns'; 
 dateFnsLocalizer() to index.html
 cd client-app, npm install revalidate
+
+nuget package install in Domain project, Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+cd reactivities folder, dotnet ef migrations add "AddedIdentity" -p Persistence/ -s API/
+
+nuget package install in API project, Microsoft.AspNetCore.Identity.UI
+
+dotnet new classlib -n Infrastructure
+dotnet sln add Infrastructure/
+cd Application
+dotnet add reference ../Infrastructure/
+cd API
+dotnet add reference ../Infrastructure/
+
+install System.IdentityModel.Tokens.JWT in Infrastructure project
+install Microsoft.AspNetCore.Authentication.JWTBearer in API project
+
+//store user secrets in development mode ony
+dotnet user-secrets init -p API
+dotnet user-secrets set "TokenKey" "super secret key" -p API
