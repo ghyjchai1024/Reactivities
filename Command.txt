@@ -80,4 +80,10 @@ install Microsoft.AspNetCore.Authentication.JWTBearer in API project
 
 //store user secrets in development mode ony
 dotnet user-secrets init -p API
-dotnet user-secrets set "TokenKey" "super secret key" -p API
+dotnet user-secrets set "TokenKey" "super secret key" -p API/
+
+
+Section 14
+cd reactivities folder, dotnet ef migrations add "UserActivityAdded" -p Persistence/ -s API/
+AutoMapper.Extensions.Microsoft.DependencyInjection > Application project
+Microsoft.EntityFrameworkCore.Proxies > Persistence project
