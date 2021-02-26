@@ -87,3 +87,17 @@ Section 14
 cd reactivities folder, dotnet ef migrations add "UserActivityAdded" -p Persistence/ -s API/
 AutoMapper.Extensions.Microsoft.DependencyInjection > Application project
 Microsoft.EntityFrameworkCore.Proxies > Persistence project
+
+Section 15
+cd API, dotnet user-secrets set "Cloudinary:CloudName" "djvafv95h"
+		dotnet user-secrets set "Cloudinary:ApiKey" "418417152915966"
+		dotnet user-secrets set "Cloudinary:ApiSecret" "jOnDl9rupLgdUEj0pmIuPMNiSN4"
+install nuget CloudinaryDotNet.Actions >> Infrastructure project
+
+Section 16
+cd reactivities folder, dotnet ef migrations add "PhotoEntityAdded" -p Persistence/ -s API/
+
+
+Section 17
+npm install react-dropzone
+npm install react-cropper @types/react-cropper
